@@ -1,3 +1,5 @@
+'use strict';
+
 const app = require('app');
 const BrowserWindow = require('browser-window');
 let mainWindow = null;
