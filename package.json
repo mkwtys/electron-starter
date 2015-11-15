@@ -7,6 +7,8 @@
     "url": "https://github.com/mkwtys/electron-starter/issues"
   },
   "devDependencies": {
+    "babel-cli": "^6.1.18",
+    "cpx": "^1.2.1",
     "electron-packager": "^5.1.1",
     "electron-prebuilt": "^0.34.3"
   },
@@ -15,13 +17,15 @@
     "electron"
   ],
   "license": "MIT",
-  "main": "main.js",
+  "main": "app/main/",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/mkwtys/electron-starter.git"
   },
   "scripts": {
+    "build": "bin/build.sh",
     "package": "electron-packager . electron-starter --platform=darwin --arch=x64 --version=0.34.3 --out=dist --cache=.cache",
-    "start": "electron main.js"
+    "start": "electron .",
+    "watch": "bin/watch.sh"
   }
 }

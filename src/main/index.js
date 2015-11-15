@@ -1,6 +1,6 @@
-var app = require('app');
-var BrowserWindow = require('browser-window');
-var mainWindow = null;
+const app = require('app');
+const BrowserWindow = require('browser-window');
+let mainWindow = null;
 
 app.on('window-all-closed', function() {
   if (process.platform != 'darwin') {
@@ -13,7 +13,7 @@ app.on('ready', function() {
     width: 800,
     height: 600
   });
-  mainWindow.loadUrl('file://' + __dirname + '/index.html');
+  mainWindow.loadUrl('file://' + __dirname + '/../renderer/index.html');
   mainWindow.on('closed', function() {
     mainWindow = null;
   });
