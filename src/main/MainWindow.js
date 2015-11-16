@@ -1,3 +1,5 @@
+/* @flow */
+
 import BrowserWindow from 'browser-window';
 
 export default class MainWindow {
