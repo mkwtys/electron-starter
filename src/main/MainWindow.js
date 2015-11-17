@@ -3,6 +3,7 @@
 import BrowserWindow from 'browser-window';
 
 export default class MainWindow {
+  window: BrowserWindow;
   constructor() {
     this.window = new BrowserWindow({
       width: 1200,
@@ -10,7 +11,7 @@ export default class MainWindow {
     });
     this.window.loadUrl(`file://${__dirname}/../renderer/index.html`);
     this.window.on('closed', () => {
-      this.window = null;
+      this.window.destroy();
     });
   }
 }
