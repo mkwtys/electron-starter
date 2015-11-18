@@ -1,3 +1,5 @@
+/// <reference path="./typings/bundle.d.ts" />
+
 /* @flow */
 
 import BrowserWindow from 'browser-window';
