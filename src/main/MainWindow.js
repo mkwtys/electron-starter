@@ -11,7 +11,7 @@ export default class MainWindow {
       width: 1200,
       height: 800
     });
-    this.window.loadUrl(`file://${__dirname}/../renderer/index.html`);
+    this.window.loadURL(`file://${__dirname}/../renderer/index.html`);
     this.window.on('closed', () => {
       this.window.destroy();
     });
